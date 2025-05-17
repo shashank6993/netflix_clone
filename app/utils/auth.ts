@@ -7,7 +7,7 @@ import EmailProvider from "next-auth/providers/email";
 
 export const authOptions = {
   adapter: PrismaAdapter(prisma),
-
+  // debug: true, (use for debugging)
   providers: [
     GitHubProvider({
       clientId: process.env.GITHUB_ID as string,
