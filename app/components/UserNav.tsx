@@ -11,24 +11,16 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { signOut } from "next-auth/react";
-import { motion } from "framer-motion";
 
 export default function UserNav() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="relative h-10 w-10 rounded-sm">
-          <motion.div
-            whileHover={{
-              scale: 1.08,
-              boxShadow: "0 4px 24px 0 rgba(255, 0, 80, 0.25)",
-            }}
-          >
-            <Avatar className="h-10 w-10 rounded-sm">
-              <AvatarImage src="https://nkljkwikhlggqlnjctge.supabase.co/storage/v1/object/public/user%20image/avatar.png" />
-              <AvatarFallback className="rounded-sm">Jan</AvatarFallback>
-            </Avatar>
-          </motion.div>
+          <Avatar className="h-10 w-10 rounded-sm">
+            <AvatarImage src="https://nkljkwikhlggqlnjctge.supabase.co/storage/v1/object/public/user%20image/avatar.png" />
+            <AvatarFallback className="rounded-sm">Jan</AvatarFallback>
+          </Avatar>
         </Button>
       </DropdownMenuTrigger>
 
